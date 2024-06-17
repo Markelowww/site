@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диабетический макулярный отек (DME)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #343a40;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 3rem;
+        }
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        main {
+            padding-bottom: 3rem;
+        }
+        h1 {
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .section-title {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 1.5rem;
+        }
+        .info-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .info-box ul li {
+            padding-left: 1.2em;
+            position: relative;
+            margin-bottom: 0.5em;
+        }
+        .info-box ul li::before {
+            content: '\2022';
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        footer {
+            background-color: #ffffff;
+            color: #007bff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .benefits-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.1em;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <a class="navbar-brand text-primary" href="{{ url_for('index') }}">Главная</a>
+        </nav>
+    </header>
+    <main class="container mt-5 pt-5">
+        <div class="text-center">
+            <h1 class="mb-4 text-primary">
+                Диабетический макулярный отек
+                <span>(Diabetic Macular Edema)</span>
+            </h1>
+            <p>Диабетический макулярный отек (DME) - это осложнение диабета, при котором происходит накопление жидкости в макуле, центральной части сетчатки. Это может привести к искажению зрения и потере его остроты. DME является одной из ведущих причин потери зрения у людей с диабетом.</p>
+            
+            <div class="info-box">
+                <h2 class="section-title">Причины и симптомы</h2>
+                <p>Основная причина DME - длительное воздействие высокого уровня сахара в крови, которое повреждает кровеносные сосуды сетчатки. Симптомы DME могут включать:</p>
+                <ul>
+                    <li>Затуманенное или искаженное центральное зрение</li>
+                    <li>Трудности с чтением и распознаванием лиц</li>
+                    <li>Появление темных или пустых пятен в поле зрения</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h2 class="section-title">Диагностика и лечение</h2>
+                <p>DME часто диагностируется с помощью офтальмологического осмотра и оптической когерентной томографии (ОКТ). Лечение может включать:</p>
+                <ul>
+                    <li>Лекарственные инъекции: Препараты, такие как анти-VEGF, могут помочь уменьшить отек.</li>
+                    <li>Лазерная терапия: Используется для укрепления кровеносных сосудов и предотвращения утечки жидкости.</li>
+                    <li>Хирургические вмешательства: В некоторых случаях может потребоваться витрэктомия.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h2 class="section-title">Профилактика</h2>
+                <p>Для снижения риска развития DME рекомендуется:</p>
+                <ul>
+                    <li>Поддержание нормального уровня сахара в крови</li>
+                    <li>Регулярный контроль артериального давления и уровня холестерина</li>
+                    <li>Регулярные визиты к офтальмологу для раннего обнаружения изменений в сетчатке</li>
+                </ul>
+            </div>
+
+          
+        </div>
+    </main>
+</body>
+</html>

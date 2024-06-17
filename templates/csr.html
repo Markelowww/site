@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центральная серозная ретинопатия (CSR)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #343a40;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 3rem;
+        }
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        main {
+            padding-bottom: 3rem;
+        }
+        h1 {
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .section-title {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 1.5rem;
+        }
+        .info-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .info-box ul li {
+            padding-left: 1.2em;
+            position: relative;
+            margin-bottom: 0.5em;
+        }
+        .info-box ul li::before {
+            content: '\2022';
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        footer {
+            background-color: #ffffff;
+            color: #007bff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .benefits-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.1em;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <a class="navbar-brand text-primary" href="{{ url_for('index') }}">Главная</a>
+        </nav>
+    </header>
+    <main class="container mt-5 pt-5">
+        <div class="text-center">
+            <h1 class="mb-4 text-primary">
+                Центральная серозная ретинопатия
+                <span>(Central Serous Retinopathy)</span>
+            </h1>
+            <p>Центральная серозная ретинопатия (CSR) - это заболевание, при котором жидкость накапливается под сетчаткой, что может привести к искажению зрения или появлению темного пятна в центральной части поля зрения. Обычно это временное состояние, которое часто встречается у мужчин в возрасте от 30 до 50 лет.</p>
+            
+            <div class="info-box">
+                <h2 class="section-title">Причины и симптомы</h2>
+                <p>Основные причины CSR включают стресс, использование стероидных препаратов и некоторые системные заболевания. Симптомы CSR могут включать:</p>
+                <ul>
+                    <li>Искажение или затемнение центрального зрения</li>
+                    <li>Появление серого или темного пятна в центре зрения</li>
+                    <li>Искажение прямых линий, которые могут казаться волнистыми</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h2 class="section-title">Диагностика и лечение</h2>
+                <p>CSR часто диагностируется с помощью офтальмологического осмотра и оптической когерентной томографии (ОКТ). В некоторых случаях может потребоваться флюоресцентная ангиография. Лечение может включать:</p>
+                <ul>
+                    <li>Наблюдение и контроль: Во многих случаях CSR проходит самостоятельно без лечения.</li>
+                    <li>Лазерная терапия: В некоторых случаях используется для закрытия утечки жидкости.</li>
+                    <li>Медикаментозное лечение: Включает использование лекарств для уменьшения утечки жидкости.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h2 class="section-title">Профилактика</h2>
+                <p>Для снижения риска развития CSR рекомендуется:</p>
+                <ul>
+                    <li>Управление стрессом и избегание чрезмерного использования стероидов.</li>
+                    <li>Регулярные осмотры у офтальмолога, особенно при наличии факторов риска.</li>
+                </ul>
+            </div>
+
+          
+        </div>
+    </main>
+</body>
+</html>

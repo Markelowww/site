@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медицинская Диагностика</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .navbar {
+            justify-content: center;
+        }
+        .navbar-brand {
+            font-size: 1.5em;
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+        .custom-file-label {
+            background-color: #ffffff;
+            border: 2px solid #ced4da;
+            font-size: 1.2em;
+            color: #6c757d;
+        }
+        .custom-file-input:focus ~ .custom-file-label {
+            border-color: #80bdff;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+        .custom-file-label::after {
+            content: "Выберите файл";
+            color: #6c757d;
+            border-left: none;
+        }
+        .custom-file-input:focus ~ .custom-file-label::after {
+            border-left: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <div class="nav-item dropdown">
+                <a class="navbar-brand text-primary" href="#">О заболеваниях</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="{{ url_for('amd') }}">AMD</a>
+                    <a class="dropdown-item" href="{{ url_for('csr') }}">CSR</a>
+                    <a class="dropdown-item" href="{{ url_for('dme') }}">DME</a>
+                    <a class="dropdown-item" href="{{ url_for('dr') }}">DR</a>
+                    <a class="dropdown-item" href="{{ url_for('erm') }}">ERM</a>
+                    <a class="dropdown-item" href="{{ url_for('mh') }}">MH</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5 pt-5">
+        <div class="text-center">
+            <h1 class="mb-4 text-primary">Определение глазных заболеваний по снимкам</h1>
+            <div class="upload-section p-5 my-5 border rounded bg-white mx-auto shadow-sm" style="max-width: 800px;">
+                <h2 class="mb-3">Загрузите ваше медицинское изображение:</h2>
+                <form action="{{ url_for('analyze_image') }}" method="post" enctype="multipart/form-data">
+                    <div class="custom-file mb-4">
+                        <input type="file" class="custom-file-input" id="photo" name="photo" accept="image/*" required>
+                        <label class="custom-file-label" for="photo">Выберите файл</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Анализировать</button>
+                </form>
+            </div>
+            <h2 class="mb-3 text-primary">Заболевания, которые определяет наша модель:</h2>
+            <div class="disease-list">
+                <a href="{{ url_for('amd') }}" class="btn btn-outline-primary btn-lg m-2">AMD</a>
+                <a href="{{ url_for('csr') }}" class="btn btn-outline-primary btn-lg m-2">CSR</a>
+                <a href="{{ url_for('dme') }}" class="btn btn-outline-primary btn-lg m-2">DME</a>
+                <a href="{{ url_for('dr') }}" class="btn btn-outline-primary btn-lg m-2">DR</a>
+                <a href="{{ url_for('erm') }}" class="btn btn-outline-primary btn-lg m-2">ERM</a>
+                <a href="{{ url_for('mh') }}" class="btn btn-outline-primary btn-lg m-2">MH</a>
+            </div>
+            <div class="benefits mt-5">
+                <h2 class="text-primary mb-4">Преимущества использование данного сервиса</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Доступная самодиагностика, которая позволяет быстрее выявлять глазные заболевания</li>
+                    <li class="list-group-item">Снижение нагрузки на врачей за счет первичной самодиагностики</li>
+                    <li class="list-group-item">Снижение риска возникновения врачебных ошибок</li>
+                    <li class="list-group-item">Ускоренный анализ симптомов для первичной диагностики</li>
+                    <li class="list-group-item">Высокая точность определения заболеваний благодаря ИИ технологиям</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="text-center py-3 bg-white text-primary shadow-sm">
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Задержка перед закрытием меню
+            $(".navbar-nav .dropdown").on("mouseleave", function() {
+                var $self = $(this);
+                setTimeout(function() {
+                    $self.find(".dropdown-menu").fadeOut();
+                }, 4000); // Увеличение времени до 4000 миллисекунд (4 секунды)
+            });
+
+            // Отображение названия загруженного файла
+            $('.custom-file-input').on('change', function(event) {
+                var inputFile = event.currentTarget;
+                $(inputFile).parent()
+                    .find('.custom-file-label')
+                    .html(inputFile.files[0].name);
+            });
+        });
+    </script>
+</body>
+</html>

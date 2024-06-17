@@ -1,0 +1,88 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .navbar {
+    justify-content: center;
+}
+
+header .navbar-brand {
+    font-size: 1.5em;
+    color: #007bff;
+    position: relative;
+}
+
+header .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+header .nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.custom-file-label {
+    background-color: #ffffff;
+    border: 2px solid #ced4da;
+    font-size: 1.2em;
+    color: #6c757d;
+}
+
+.custom-file-input:focus ~ .custom-file-label {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.custom-file-label::after {
+    content: "Выберите файл";
+    color: #6c757d;
+    border-left: none;
+}
+
+.custom-file-input:focus ~ .custom-file-label::after {
+    border-left: none;
+}
+
+main {
+    padding-top: 70px;
+}
+
+.upload-section {
+    max-width: 800px;
+    margin: auto;
+}
+
+.upload-section h2 {
+    color: #007bff;
+}
+
+.disease-list .btn {
+    margin: 5px;
+}
+
+.benefits h2 {
+    color: #007bff;
+}
+
+footer {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}

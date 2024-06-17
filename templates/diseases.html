@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О заболеваниях</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Главная</a>
+        </nav>
+    </header>
+    <main class="container mt-5">
+        <div class="text-center">
+            <h1 class="mb-4">О заболеваниях</h1>
+            <p>Информация о различных заболеваниях, которые может диагностировать наша модель:</p>
+            <div id="amd" class="mb-4">
+                <h2>AMD</h2>
+                <p>Описание заболевания AMD...</p>
+            </div>
+            <div id="csr" class="mb-4">
+                <h2>CSR</h2>
+                <p>Описание заболевания CSR...</p>
+            </div>
+            <div id="mh" class="mb-4">
+                <h2>MH</h2>
+                <p>Описание заболевания MH...</p>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Диабетическая ретинопатия (DR)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #343a40;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 3rem;
+        }
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        main {
+            padding-bottom: 3rem;
+        }
+        h1 {
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .section-title {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 1.5rem;
+        }
+        .info-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .info-box ul li {
+            padding-left: 1.2em;
+            position: relative;
+            margin-bottom: 0.5em;
+        }
+        .info-box ul li::before {
+            content: '\2022';
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        footer {
+            background-color: #ffffff;
+            color: #007bff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .benefits-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.1em;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <a class="navbar-brand text-primary" href="{{ url_for('index') }}">Главная</a>
+        </nav>
+    </header>
+    <main class="container mt-5 pt-5">
+        <div class="text-center">
+            <h1 class="mb-4 text-primary">
+                Диабетическая ретинопатия
+                <span>(Diabetic Retinopathy)</span>
+            </h1>
+            <p>Диабетическая ретинопатия (DR) - это осложнение диабета, которое поражает кровеносные сосуды сетчатки глаза. Это основная причина потери зрения среди людей с диабетом и может привести к серьезным изменениям в сетчатке, включая ее отек, кровоизлияния и образование новых кровеносных сосудов.</p>
+            
+            <div class="info-box">
+                <h2 class="section-title">Симптомы и стадии</h2>
+                <p>Диабетическая ретинопатия развивается постепенно и проходит через несколько стадий. Симптомы могут включать:</p>
+                <ul>
+                    <li>Затуманенное зрение</li>
+                    <li>Плавающие пятна или темные линии</li>
+                    <li>Трудности с различением цветов</li>
+                    <li>Потеря зрения в темное время суток</li>
+                </ul>
+                <p>Стадии DR включают неопролиферативную ретинопатию (NPDR) и пролиферативную ретинопатию (PDR). На ранних стадиях может не быть заметных симптомов, но регулярные осмотры помогут обнаружить изменения в сетчатке.</p>
+            </div>
+
+            <div class="info-box">
+                <h2 class="section-title">Диагностика и лечение</h2>
+                <p>DR диагностируется с помощью офтальмологических осмотров, которые включают ОКТ и флюоресцентную ангиографию. Лечение может включать:</p>
+                <ul>
+                    <li>Лекарственные инъекции: Препараты анти-VEGF помогают уменьшить отек и предотвратить рост новых кровеносных сосудов.</li>
+                    <li>Лазерная терапия: Используется для укрепления поврежденных сосудов и предотвращения их утечки.</li>
+                    <li>Хирургические вмешательства: Включают витрэктомию для удаления кровоизлияний и восстановления сетчатки.</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h2 class="section-title">Профилактика</h2>
+                <p>Для снижения риска развития DR рекомендуется:</p>
+                <ul>
+                    <li>Контроль уровня сахара в крови</li>
+                    <li>Регулярное измерение артериального давления и уровня холестерина</li>
+                    <li>Регулярные визиты к офтальмологу для раннего обнаружения изменений в сетчатке</li>
+                </ul>
+            </div>
+
+            
+        </div>
+    </main>
+</body>
+</html>
